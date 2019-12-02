@@ -4,15 +4,6 @@ function Invoke-Day1 {
         [int]$Mass
     )
     
-    begin {
-        
-    }
-    
-    process {
-        
-    }
-    
-    end {
-        
-    }
+    [int]($Mass/3)-2
+
 }
