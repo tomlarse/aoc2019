@@ -37,7 +37,7 @@ function Invoke-Day2Part2 {
             $Program[1] = $noun
             $Program[2] = $verb
 
-            if ((Invoke-Day2Part1 -Program $Program) -eq 19690720) {
+            if ((Invoke-Day2Part1 -Program $Program)[0] -eq 19690720) {
                 return 100*$noun+$verb
             }
         }
