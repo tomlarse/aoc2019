@@ -16,6 +16,15 @@ function Invoke-Day1Part2 {
         [int]$Mass
     )
     process {
-        
+        $RequiredFuel = 0
+        $LastMass = $Mass
+        while ((Invoke-Day1Part1 -Mass $LastMass) -gt 0) {
+            $RequiredFuel += Invoke-Day1Part1 -Mass $LastMass
+            $LastMass = Invoke-Day1Part1 -Mass $LastMass
+        }
+        $RequiredFuel
     }
 }
+
+# Solve Part 1 Import-Csv .\day1\input.csv -Header Mass | Invoke-Day1Part1 | Measure-Object -Sum
+# Solve Part 2 Import-Csv .\day1\input.csv -Header Mass | Invoke-Day1Part2 | Measure-Object -Sum

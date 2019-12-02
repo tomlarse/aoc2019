@@ -26,5 +26,3 @@ Describe "Day 1" {
         }
     }
 }
-
-# Solve Part 1 Import-Csv .\day1\input1.csv -Header Mass | Invoke-Day1 | Measure-Object -Sum
