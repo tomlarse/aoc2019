@@ -91,9 +91,7 @@ function Invoke-Day3Part1 {
 
     foreach ($Vcoord in $($Wire1Lines | Where-Object Direction -eq "V").Points) {
         foreach ($Hcoord in $($Wire2Lines | Where-Object Direction -eq "H").Points) {
-            if (
-                
-            ) {
+            if ($Vcoord.x -eq $Hcoord.x -and $Vcoord.y -eq $Hcoord.y) {
                 if ($Hcoord.x -ne 0 -and $Hcoord.y -ne 0) {
                     $null = $crosses.Add($Hcoord)
                 }
