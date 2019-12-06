@@ -33,7 +33,7 @@ Describe "Day 4 Tests" {
             Test-Password2 122255 | Should -BeTrue
         }
         It "Judges passwords correctly self 4" {
-            Test-Password2 111145 | Should -BeFalse
+            Test-Password2 788999 | Should -BeTrue
         }
     }
 }
